@@ -39,7 +39,7 @@ export default function ProductsPage() {
     };
 
     //asynchronous function to handle adding a new product
-    const handleAddProduct = async (e) => {
+    const handleSubmit = async (e) => {
         //this function will add a new product to the database
         //e is the event object
         //e.preventDefault();
@@ -47,7 +47,7 @@ export default function ProductsPage() {
             //set loading to true
             setLoading(true);
             //make an API request to add a new product
-            const response = await fetch('/api/products', {
+            const response = await fetch('/api/items', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
